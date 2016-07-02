@@ -7,18 +7,18 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.views import defaults as default_views
 
-from storehouse.views import bad_request, server_error
+from farmdation.views import bad_request, server_error
 
 urlpatterns = [
     # Django Admin
     url(settings.ADMIN_URL, include(admin.site.urls)),
 
     # Users
-    url(r'^users/', include('storehouse.users.urls', namespace='users')),
-    url(r'^accounts/', include('storehouse.users.urls_allauth')),
+    url(r'^users/', include('farmdation.users.urls', namespace='users')),
+    url(r'^accounts/', include('farmdation.users.urls_allauth')),
 
     # Pages
-    url(r'', include('storehouse.pages.urls', namespace='pages')),
+    url(r'', include('farmdation.pages.urls', namespace='pages')),
 
     # Your stuff: custom urls includes go here
 
@@ -26,8 +26,8 @@ urlpatterns = [
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler400 = 'storehouse.views.bad_request'
-handler500 = 'storehouse.views.server_error'
+handler400 = 'farmdation.views.bad_request'
+handler500 = 'farmdation.views.server_error'
 
 if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit

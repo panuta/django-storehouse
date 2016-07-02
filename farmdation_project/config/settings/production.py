@@ -11,7 +11,7 @@ SECRET_KEY = ''
 
 # Email settings
 # ------------------------------------------------------------------------------
-DEFAULT_FROM_EMAIL = 'Storehouse <noreply@%s>' % WEBSITE_DOMAIN
+DEFAULT_FROM_EMAIL = 'Farmdation <noreply@%s>' % WEBSITE_DOMAIN
 EMAIL_BACKEND = 'django_mailgun.MailgunBackend'
 
 MAILGUN_ACCESS_KEY = ''

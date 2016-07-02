@@ -17,9 +17,9 @@ SECRET_KEY = 'THIS_IS_DUMMY_SECRET_KEY_FOR_DEVELOPMENT_ONLY'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'storehouse',
-        'USER': 'storehouse',
-        'PASSWORD': 'storehouse',
+        'NAME': 'farmdation',
+        'USER': 'farmdation',
+        'PASSWORD': 'farmdation',
         'HOST': '',
         'PORT': '',
     },

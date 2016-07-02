@@ -1,5 +1,5 @@
 """
-WSGI config for Storehouse project.
+WSGI config for Farmdation project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Django settings for storehouse project.
+Django settings for farmdation project.
 
 Django settings documentation
 https://docs.djangoproject.com/en/dev/topics/settings/
@@ -13,11 +13,11 @@ from __future__ import absolute_import, unicode_literals
 import environ
 
 ROOT_DIR = environ.Path(__file__) - 3  # (/a/b/myfile.py - 3 = /)
-APPS_DIR = ROOT_DIR.path('storehouse')
+APPS_DIR = ROOT_DIR.path('farmdation')
 
 env = environ.Env()
 
-WEBSITE_NAME = 'Storehouse'
+WEBSITE_NAME = 'Farmdation'
 WEBSITE_DOMAIN = 'example.com'  # Do not include subdomain
 WEBSITE_URL = 'www.' + WEBSITE_DOMAIN
 
@@ -52,8 +52,8 @@ THIRD_PARTY_APPS = (
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
-    'storehouse.common',
-    'storehouse.users',  # custom users app
+    'farmdation.common',
+    'farmdation.users',  # custom users app
 
     # Your stuff: custom apps go here
 
@@ -81,7 +81,7 @@ MIDDLEWARE_CLASSES = (
 # MIGRATIONS CONFIGURATION
 # ------------------------------------------------------------------------------
 MIGRATION_MODULES = {
-    'sites': 'storehouse.contrib.sites.migrations'
+    'sites': 'farmdation.contrib.sites.migrations'
 }
 
 
@@ -151,7 +151,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
 
                 # Your stuff: custom template context processors go here
-                'storehouse.context_processors.project_settings',
+                'farmdation.context_processors.project_settings',
             ],
         },
     },
@@ -208,11 +208,11 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = False
 
 ACCOUNT_SESSION_REMEMBER = True
-ACCOUNT_USER_DISPLAY = 'storehouse.users.models.user_display_name'
+ACCOUNT_USER_DISPLAY = 'farmdation.users.models.user_display_name'
 
 ACCOUNT_FORMS = {
-    'signup': 'storehouse.users.forms.EmailUserSignupForm',
-    'reset_password': 'storehouse.users.forms.ResetPasswordForm',
+    'signup': 'farmdation.users.forms.EmailUserSignupForm',
+    'reset_password': 'farmdation.users.forms.ResetPasswordForm',
 }
 
 # Email verification
@@ -228,10 +228,10 @@ ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = False
 # Social account
 SOCIALACCOUNT_QUERY_EMAIL = True
 SOCIALACCOUNT_AUTO_SIGNUP = False
-SOCIALACCOUNT_ADAPTER = 'storehouse.users.adapter.SocialAccountAdapter'
+SOCIALACCOUNT_ADAPTER = 'farmdation.users.adapter.SocialAccountAdapter'
 
 SOCIALACCOUNT_FORMS = {
-    'signup': 'storehouse.users.forms.SocialUserSignupForm',
+    'signup': 'farmdation.users.forms.SocialUserSignupForm',
 }
 
 SOCIALACCOUNT_PROVIDERS = {

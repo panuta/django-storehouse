@@ -16,8 +16,8 @@ from easy_thumbnails.namers import default as default_thumbnail_namer
 from django.core.files import File
 from django.conf import settings
 
-from storehouse.common.utils import split_filepath
-from storehouse.users.models import get_user_profile_image_relpath, get_temp_user_profile_image_relpath, \
+from farmdation.common.utils import split_filepath
+from farmdation.users.models import get_user_profile_image_relpath, get_temp_user_profile_image_relpath, \
     get_temp_user_profile_image_filename
 
 

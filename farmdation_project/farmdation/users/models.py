@@ -9,7 +9,7 @@ from django.db import models
 from easy_thumbnails.fields import ThumbnailerImageField
 from autoslug.utils import slugify
 
-from storehouse.common.utils import split_filepath
+from farmdation.common.utils import split_filepath
 
 
 def get_user_profile_image_relpath(instance, filename):

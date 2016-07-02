@@ -1,4 +1,4 @@
-from storehouse.users.models import User
+from farmdation.users.models import User
 
 from allauth.account.models import EmailAddress
 from allauth.account.adapter import get_adapter as get_account_adapter
